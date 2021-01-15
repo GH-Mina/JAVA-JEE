@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core" >
+
+<head>
+<meta charset="ISO-8859-1"></meta>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<title>Insert title here</title>
+</head>
+<body>
+<div class="cmnd">
+<h:form>
+
+
+
+
+
+<fieldset>
+<legend>Informations Commandes</legend>
+<h:panelGrid columns="3" class="table">
+<h:outputText value="Date: "></h:outputText> <h:inputText value="#{commande.date}" id="idDate" required="true" requiredMessage="the date is required"></h:inputText><span><h:message for="idDate" style="color:green"></h:message><br/></span>
+<h:outputText value="Montant: "></h:outputText> <h:inputText value="#{commande.montant}" id="idMnt" required="true" requiredMessage="le montant est obligatoire" validatorMessage="le montant ne doit pas depasser 20000">
+   <f:validateLongRange  maximum="20000" ></f:validateLongRange> 
+</h:inputText><span><h:message for="idMnt" style="color:green"></h:message><br/></span>
+<h:outputText value="Mode de paiement: "></h:outputText> <h:inputText value="#{commande.modePaiement}" id="idMP" required="true" requiredMessage="le mode de paiement est obligatoire"  validatorMessage="Please enter mode paiement between 6 and 20 characters">
+   <f:validateLength minimum="6" maximum="20"></f:validateLength>
+ </h:inputText><span><h:message for="idMP" style="color:green"></h:message><br/></span>
+
+<h:outputText value="Statut de paiement: "></h:outputText> <h:inputText value="#{commande.statutPaiement}" id="idSP" required="true" requiredMessage="le statut de paiement est obligatoire"></h:inputText><span><h:message for="idSP" style="color:green"></h:message><br/></span>
+<h:outputText value="Mode de livraison: "></h:outputText> <h:inputText value="#{commande.modeLivraison}" id="idML" required="true" requiredMessage="le mode de livraison est obligatoire"  validatorMessage="Please enter mode livraison less then 30 characters">
+   <f:validateLength maximum="30"></f:validateLength>
+</h:inputText><span><h:message for="idML" style="color:green"></h:message><br/></span>
+<h:outputText value="Statut de livraison: "></h:outputText> <h:inputText value="#{commande.statutLivraison}" id="idSL" ></h:inputText>
+</h:panelGrid>
+</fieldset><br/>
+
+<h:commandButton class="center" value="valider"></h:commandButton>
+
+</h:form>
+</div>
+</body>
+</html>

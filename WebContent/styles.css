@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+legend { 
+  display: block;
+  font-weight:bold;
+  padding-left: 2px;
+  padding-right: 2px;
+  border:none;
+  color:blue;
+}
+.center{
+	 left:50%;
+}
+
+fieldset {
+	border-color:blue;
+}
+
+fieldset legend {
+	color:bleu;
+	font-weight:bold;
+}
+.cmnd{
+	padding-left: 200px;
+  padding-right: 200px;
+}
+.table{
+	border: 2px;
+}
+.table th{
+	background-color: #00ffff;
+	padding: 2px;
+	margin: 1px;
+	size: 40%;
+}
+.table td{
+	background-color: #c0c0c0;
+	padding: 2px;
+	margin: 1px;
+	size: 40%;
+}
